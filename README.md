@@ -5,6 +5,8 @@ Starter files to help initialize the smart sales project.
 
 ## Project Setup Guide (Mac/Linux)
 
+Run all commands from a terminal in the root project folder. 
+
 ### Step A - Create a Local Project Virtual Environment
 
 ```shell
@@ -28,9 +30,17 @@ python3 -m pip install --upgrade -r requirements.txt
 ```shell
 python3 -m datafun_venv_checker.venv_checker
 ```
+
+### Step E - Run the initial project script
+
+```shell
+python3 scripts/data_prep.py
+```
 -----
 
 ## Project Setup Guide (Windows)
+
+Run all commands from a PowerShell terminal in the root project folder. 
 
 ### Step A - Create a Local Project Virtual Environment
 
@@ -54,6 +64,12 @@ py -m pip install --upgrade -r requirements.txt
 
 ```shell
 py -m datafun_venv_checker.venv_checker
+```
+
+### Step E - Run the initial project script
+
+```shell
+py scripts/data_prep.py
 ```
 -----
 
