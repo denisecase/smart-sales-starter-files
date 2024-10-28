@@ -1,79 +1,83 @@
 # smart-sales-starter-files
-Starter files to help initialize the smart sales project.
+
+Starter files to initialize the smart sales project.
 
 -----
 
-## Project Setup Guide (Mac/Linux)
+## Project Setup Guide (1-Mac/Linux)
 
 Run all commands from a terminal in the root project folder. 
 
-### Step A - Create a Local Project Virtual Environment
+### Step 1A - Create a Local Project Virtual Environment
 
 ```shell
 python3 -m venv .venv
 ```
 
-### Step B - Activate the Virtual Environment
+### Step 1B - Activate the Virtual Environment
 
 ```shell
 source .venv/bin/activate
 ```
 
-### Step C - Install Packages
+### Step 1C - Install Packages
 
 ```shell
 python3 -m pip install --upgrade -r requirements.txt
 ```
 
-### Step D - Optional: Verify .venv Setup
+### Step 1D - Optional: Verify .venv Setup
 
 ```shell
 python3 -m datafun_venv_checker.venv_checker
 ```
 
-### Step E - Run the initial project script
+### Step 1E - Run the initial project script
 
 ```shell
 python3 scripts/data_prep.py
 ```
+
 -----
 
-## Project Setup Guide (Windows)
+## Project Setup Guide (2-Windows)
 
-Run all commands from a PowerShell terminal in the root project folder. 
+Run all commands from a PowerShell terminal in the root project folder.
 
-### Step A - Create a Local Project Virtual Environment
+### Step 2A - Create a Local Project Virtual Environment
 
 ```shell
 py -m venv .venv
 ```
 
-### Step B - Activate the Virtual Environment
+### Step 2B - Activate the Virtual Environment
 
 ```shell
 .venv\Scripts\activate
 ```
 
-### Step C - Install Packages
+### Step 2C - Install Packages
 
 ```shell
 py -m pip install --upgrade -r requirements.txt
 ```
 
-### Step D - Optional: Verify .venv Setup
+### Step 2D - Optional: Verify .venv Setup
 
 ```shell
 py -m datafun_venv_checker.venv_checker
 ```
 
-### Step E - Run the initial project script
+### Step 2E - Run the initial project script
 
 ```shell
 py scripts/data_prep.py
 ```
+
 -----
 
 ## Initial Package List
+
 - pip
 - loguru
 - ipykernel
@@ -86,4 +90,3 @@ py scripts/data_prep.py
 - pyspark==4.0.0.dev1
 - pyspark[sql]
 - git+https://github.com/denisecase/datafun-venv-checker.git#egg=datafun_venv_checker
-
