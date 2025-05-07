@@ -30,9 +30,14 @@ RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"  # Directory for raw data files
 DATA_DIR.mkdir(exist_ok=True)
 RAW_DATA_DIR.mkdir(exist_ok=True)
 
+#####################################
+# Define Functions - Reusable blocks of code / instructions
+#####################################
 
 def read_raw_data(file_name: str) -> pd.DataFrame:
-    """Read raw data from CSV."""
+    """Define a function to read raw data from CSV,
+    given the name of the file as a string. 
+    We will look for it in the data/raw directory."""
     file_path: pathlib.Path = RAW_DATA_DIR.joinpath(file_name)
     try:
         logger.info(f"READING: {file_path}.")
@@ -45,7 +50,7 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
         return pd.DataFrame()  # Return an empty DataFrame if any other error occurs
 
 def process_data(file_name: str) -> None:
-    """Process raw data by reading it into a pandas DataFrame object."""
+    """Define a function to process raw data by reading it into a pandas DataFrame object."""
     df = read_raw_data(file_name)
     if df.empty:
         logger.warning(f"No data to process for {file_name}.")
@@ -53,6 +58,11 @@ def process_data(file_name: str) -> None:
     logger.info(f"Processing data for {file_name}.")
     logger.info(f"Data shape (ct of rows, ct of columns): {df.shape}.")
     logger.info(f"Data columns: {df.columns.tolist()}.")
+
+
+#####################################
+# Define Main Function - The main entry point of the script
+#####################################
 
 def main() -> None:
     """Main function for processing raw customer, product, and sales data."""
@@ -74,7 +84,11 @@ def main() -> None:
     logger.info("Data preparation complete.")
 
 
-# Conditional execution block that calls main() only when this file is executed directly
-# This is a common Python idiom to allow or prevent parts of code from being run when the modules are imported
+#####################################
+# Conditional Execution Block 
+# Ensures the script runs only when executed directly
+# This is a common Python convention.
+#####################################
+
 if __name__ == "__main__":
     main()

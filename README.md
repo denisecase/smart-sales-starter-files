@@ -55,7 +55,7 @@ py scripts/data_prep.py
 
 ## After Making Progress
 
-Once you’ve made changes and verified the script ran successfully, 
+Once you’ve verified the script ran successfully, 
 git add, commit, and push changes to your GitHub repository.
 
 ```shell
@@ -63,3 +63,5 @@ git add .
 git commit -m "ran initial data_prep.py"
 git push -u origin main
 ```
+
+For best results, git add-commit-push frequently after making any useful progress. 
